@@ -49,8 +49,10 @@ start() {
     exit 1
   fi
 
-  cd "$DIST_DIR"
-  nohup python3 -m http.server "$PORT" --bind "$HOST" \
+  nohup python3 "$SCRIPT_DIR/serve.py" \
+    --directory "$DIST_DIR" \
+    --port "$PORT" \
+    --bind "$HOST" \
     > "$LOG_FILE" 2>&1 &
   echo "$!" > "$PID_FILE"
 

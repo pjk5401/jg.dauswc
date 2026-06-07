@@ -159,6 +159,8 @@ chmod +x cloud-hub.sh
 
 PID와 로그는 Git에 포함되지 않는 `site/.run/`에 저장됩니다. 기본 포트는 `8080`이며, 일시적으로 다른 값을 사용하려면 `PORT=포트번호 ./cloud-hub.sh start`처럼 실행할 수 있습니다.
 
+운영 스크립트는 `site/serve.py`를 사용해 `/getting-started` 같은 VitePress clean URL을 해당 `.html` 파일에 연결합니다. 따라서 하위 페이지 주소를 직접 입력하거나 새로고침해도 정상적으로 열립니다.
+
 운영 정책이나 서버 구성이 바뀌면 학생용 문서와 프로젝트 관리 문서를 함께 갱신합니다.
 
 ## 보안 원칙
